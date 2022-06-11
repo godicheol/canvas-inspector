@@ -12,10 +12,25 @@
 
     <div style="margin: 1rem 0; border-bottom: 1px solid;"></div>
 
+    <h3>Result</h3>
+
+    <strong>Max width:</strong>
+    <span id="result-1"></span>
+    <br />
+
+    <strong>Max height:</strong>
+    <span id="result-2"></span>
+    <br />
+
+    <strong>Max area:</strong>
+    <span id="result-3"></span>
+
     <script src="dist/canvas-inspector.js"></script>
     <script>
         var res = canvasInspector.test();
-        console.log(res);
+        document.getElementById("result-1").innerHTML = res.width + " px";
+        document.getElementById("result-2").innerHTML = res.height + " px";
+        document.getElementById("result-3").innerHTML = res.area + " x " + res.area + " px";
     </script>
 </body>
 
